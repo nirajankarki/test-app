@@ -7,16 +7,16 @@
   <div class="collapse navbar-collapse" id="navId">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="dashboard">Dashboard</a>
+        <a class="nav-link" [routerLink]="['/admin','dashboard']">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="about">About</a>
+        <a class="nav-link"  [routerLink]="['/admin','about']">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="projects">Projects</a>
+        <a class="nav-link"  [routerLink]="['/admin','projects']">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="signup">SignUp</a>
+        <a class="nav-link"  [routerLink]="['/admin','signup']">SignUp</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

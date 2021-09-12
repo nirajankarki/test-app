@@ -72,6 +72,10 @@
                       && (signUpForm.get('email').dirty
                       ||signUpForm.get('email').touched
                       ||form.submitted ) && signUpForm.get('email').errors?.email">Email should be folling pattern</span>
+              <span class="text-danger" *ngIf="signUpForm.get('email').invalid
+                      && (signUpForm.get('email').dirty
+                      ||signUpForm.get('email').touched
+                      ||form.submitted ) && signUpForm.get('email').errors?.uniqueEmail">Dulicate Email</span>
             </div>
           </div>
 

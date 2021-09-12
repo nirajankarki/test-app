@@ -1,0 +1,363 @@
+
+<div class="wrapper d-flex align-items-stretch">
+  <nav id="sidebar">
+    <div class="custom-menu">
+      <button type="button" id="sidebarCollapse" class="btn btn-primary" (click)="collapse()">
+      </button>
+    </div>
+    <div class="text-center py-4">
+        <h3>COTIVITI</h3>
+    </div>
+    <ul class="list-unstyled components mb-5">
+      <li class="active">
+        <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+      </li>
+      <li>
+        <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+      </li>
+      <li>
+        <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
+      </li>
+      <li>
+        <a href="#"><span class="fa fa-trophy mr-3"></span> Top Review</a>
+      </li>
+      <li>
+        <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
+      </li>
+      <li>
+        <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
+      </li>
+      <li>
+        <a href="#"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content" class="p-4 p-md-5 pt-5">
+    <div class="row">
+      <div class="col-md-12 mb-2">
+        <div class="au-breadcrumb-content">
+          <div class="au-breadcrumb-left">
+            <button class="au-btn au-btn-icon au-btn--green" data-toggle="modal" data-target = "#newModal">
+              <i class="fa fa-plus"></i>add layout</button>
+          </div>
+          <form class="form-inline">
+            <div class="form-group mx-sm-3">
+              <select class="form-control" id="drpSearchBy" name="searchBy">
+                <option value="projectID">Project ID</option>
+                <option value="projectName">Project Name</option>
+                <option value="dateOfStart">Date of Start</option>
+                <option value="teamSize">Team Size</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" id="txtSearchText" name="searchText">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-search"></i></span>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- DATA TABLE-->
+        <div class="table-responsive m-b-40">
+          <table class="table table-borderless table-data3">
+            <thead>
+            <tr>
+              <th>date</th>
+              <th>type</th>
+              <th>description</th>
+              <th>status</th>
+              <th>price</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><i class="bi bi-three-dots-vertical"></i>2018-09-29 05:57</td>
+              <td>Mobile</td>
+              <td>iPhone X 64Gb Grey</td>
+              <td class="process">Processed</td>
+              <td>$999.00</td>
+              <td>
+                <button class="btn btn-info mx-1" data-toggle="modal" data-target = "#editModal"><i class="fa fa-pencil"></i> </button>
+                <button class="btn btn-warning" data-toggle="modal" data-target = "#deleteModal"><i class="fa fa-trash"></i> </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2018-09-28 01:22</td>
+              <td>Mobile</td>
+              <td>Samsung S8 Black</td>
+              <td class="process">Processed</td>
+              <td>$756.00</td>
+            </tr>
+            <tr>
+              <td>2018-09-27 02:12</td>
+              <td>Game</td>
+              <td>Game Console Controller</td>
+              <td class="denied">Denied</td>
+              <td>$22.00</td>
+            </tr>
+            <tr>
+              <td>2018-09-26 23:06</td>
+              <td>Mobile</td>
+              <td>iPhone X 256Gb Black</td>
+              <td class="denied">Denied</td>
+              <td>$1199.00</td>
+            </tr>
+            <tr>
+              <td>2018-09-25 19:03</td>
+              <td>Accessories</td>
+              <td>USB 3.0 Cable</td>
+              <td class="process">Processed</td>
+              <td>$10.00</td>
+            </tr>
+            <tr>
+              <td>2018-09-29 05:57</td>
+              <td>Accesories</td>
+              <td>Smartwatch 4.0 LTE Wifi</td>
+              <td class="denied">Denied</td>
+              <td>$199.00</td>
+            </tr>
+            <tr>
+              <td>2018-09-24 19:10</td>
+              <td>Camera</td>
+              <td>Camera C430W 4k</td>
+              <td class="process">Processed</td>
+              <td>$699.00</td>
+            </tr>
+            <tr>
+              <td>2018-09-22 00:43</td>
+              <td>Computer</td>
+              <td>Macbook Pro Retina 2017</td>
+              <td class="process">Processed</td>
+              <td>$10.00</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+    <h2 class="mb-4">Sidebar #09</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+</div>
+  </div>
+</div>
+
+<!--New Layout-->
+<form>
+  <div class="modal" role="dialog" id="newModal">
+    <div class="modal-dialog">
+      <div class = "modal-content">
+        <div class="modal-header">
+          <div class="modal-title">New Projects</div>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group row">
+            <label for="newProjectId" class="col-sm-4 col-form-label">Project ID</label>
+            <div class="col-sm-8">
+              <input type="text" id="newProjectId" class="form-control"
+                     placeholder="Project ID" name="projectID">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="newProjectName" class="col-sm-4 col-form-label">Project Name</label>
+            <div class="col-sm-8">
+              <input type="text" id="newProjectName" class="form-control" placeholder="Project Name" name="projectName">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="newDateOfStart" class="col-sm-4 col-form-label">Date Of Start</label>
+            <div class="col-sm-8">
+              <input type="date" id="newDateOfStart" class="form-control" placeholder="Date of Start" name="dateOfStart">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="newTeamSize" class="col-sm-4 col-form-label">Team Size</label>
+            <div class="col-sm-8">
+              <input type="number" id="newTeamSize" class="form-control" placeholder="Team Size" name="teamSizes" >
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" data-dismiss="modal" >Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<!-- Edit Projects -->
+<form>
+  <div class="modal" role="dialog" id="editModal">
+    <div class="modal-dialog">
+      <div class = "modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Edit Projects</div>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group row">
+            <label for="editProjectId" class="col-sm-4 col-form-label">Project ID</label>
+            <div class="col-sm-8">
+              <input type="text" id="editProjectId" class="form-control-plaintext"
+                     placeholder="Project ID" name="projectID" disabled="disabled">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="editProjectName" class="col-sm-4 col-form-label">Project Name</label>
+            <div class="col-sm-8">
+              <input type="text" id="editProjectName" class="form-control" placeholder="Project Name" name="projectName" >
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="editDateOfStart" class="col-sm-4 col-form-label">Date Of Start</label>
+            <div class="col-sm-8">
+              <input type="date" id="editDateOfStart" class="form-control" placeholder="Date of Start" name="editDateOfStart" >
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="editTeamSize" class="col-sm-4 col-form-label">Team Size</label>
+            <div class="col-sm-8">
+              <input type="number" id="editTeamSize" class="form-control" placeholder="Team Size" name="editTeamSize" >
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" data-dismiss="modal" >Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- Delete Projects -->
+<form>
+  <div class="modal" role="dialog" id="deleteModal">
+    <div class="modal-dialog">
+      <div class = "modal-content">
+        <div class="modal-header">
+          <div class="modal-title">Delete Projects</div>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group row">
+            <label for="deleteProjectId" class="col-sm-4 col-form-label">Project ID</label>
+            <div class="col-sm-8">
+              <input type="text" id="deleteProjectId" class="form-control-plaintext"
+                     placeholder="Project ID" name="projectID" disabled="disabled">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="deleteProjectName" class="col-sm-4 col-form-label">Project Name</label>
+            <div class="col-sm-8">
+              <input type="text" id="deleteProjectName" class="form-control-plaintext"
+                     placeholder="Project Name" name="projectName" disabled = "disabled">
+            </div>
+          </div>
+
+          <div class="alert alert-warning text-warning" role="alert">
+            Are you sure you want to delete?
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" data-dismiss="modal">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

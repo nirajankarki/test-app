@@ -7,13 +7,16 @@ import {Project} from './project';
   providedIn: 'root'
 })
 export class ProjectService {
-
+  hideShowTable = false;
   constructor(private httpClient: HttpClient) { }
+  showHide(): void{
+    this.hideShowTable = !this.hideShowTable;
+  }
   getAllProjects(): Observable<Project[]>{
     return this.httpClient.get<Project[]>('http://localhost:3000/projects', {responseType: 'json'});
   }
   getProjectByProjectId(ProjectID: number): Observable<Project>{
-    return this.httpClient.get<Project>('/api/projects/searchByProjectId/' + ProjectID, {responseType: 'json'});
+    return this.httpClient.get<Project>('http://localhost:3000/projects/' + ProjectID, {responseType: 'json'});
   }
   insertProject(newProject: Project): Observable<Project>{
     return this.httpClient.post<Project>('http://localhost:3000/projects', newProject, {responseType: 'json'});
@@ -27,4 +30,11 @@ export class ProjectService {
   searchProjects(searchBy: string, searchText: string): Observable<Project[]>{
     return this.httpClient.get<Project[]>('http://localhost:3000/projects/search' + searchBy + '/' + searchText, {responseType: 'json'});
   }
+
+
+  getUserByEmail(Email: string): Observable<any>{
+    return this.httpClient.get<any>('http://localhost:3000/projects/getUserByEmail/' + Email, {responseType: 'json'});
+  }
+
+
 }

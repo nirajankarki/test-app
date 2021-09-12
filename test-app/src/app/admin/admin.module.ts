@@ -11,6 +11,14 @@ import {TeamsizevalidatorDirective} from '../teamsizevalidator.directive';
 import {AppClientLocationValidatorDirective} from '../app-client-location-validator.directive';
 import {ProjectIdUniqueValidatorsDirective} from '../project-id-unique-validators.directive';
 import {CustomValidatorsService} from '../custom-validators.service';
+import { ProjectComponent } from './project/project.component';
+import { CheckboxprinterComponent } from './checkboxprinter/checkboxprinter.component';
+import { NumberToWordPipe } from './number-to-word.pipe';
+import { FilterPipe } from './filter.pipe';
+import { PagingPipe } from './paging.pipe';
+import {RouterModule} from '@angular/router';
+import {ProjectDetailsComponent} from './project-details/project-details.component';
+import {AdminRoutingModule} from './admin-routing/admin-routing.module';
 
 
 @NgModule({
@@ -22,12 +30,19 @@ import {CustomValidatorsService} from '../custom-validators.service';
     SignupComponent,
     TeamsizevalidatorDirective,
     AppClientLocationValidatorDirective,
-    ProjectIdUniqueValidatorsDirective
+    ProjectIdUniqueValidatorsDirective,
+    ProjectComponent,
+    CheckboxprinterComponent,
+    NumberToWordPipe,
+    FilterPipe,
+    PagingPipe,
+    ProjectDetailsComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminRoutingModule
   ],
   exports: [DashboardComponent,
     AboutComponent,
@@ -36,7 +51,11 @@ import {CustomValidatorsService} from '../custom-validators.service';
     SignupComponent,
     TeamsizevalidatorDirective,
     AppClientLocationValidatorDirective,
-    ProjectIdUniqueValidatorsDirective],
+    ProjectIdUniqueValidatorsDirective,
+    ProjectComponent,
+    CheckboxprinterComponent,
+    ProjectDetailsComponent
+  ],
   providers: [DashboardService,
     CustomValidatorsService
   ]

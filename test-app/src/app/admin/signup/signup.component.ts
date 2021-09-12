@@ -13,6 +13,7 @@ export class SignupComponent implements OnInit {
   signUpForm: FormGroup;
   genders = ['male', 'female'];
   countries: Country[] = [];
+  canLeave = true;
   constructor(private countryService: CountriesService, private formBuilder: FormBuilder,
               private customValidators: CustomValidatorsService) { }
 
@@ -39,7 +40,8 @@ export class SignupComponent implements OnInit {
         firstName: [null, [Validators.required, Validators.minLength(2)]],
         lastName: [null, [Validators.required, Validators.minLength(2)]]
       }),
-      email: [null, [Validators.required, Validators.email]],
+      email: [null, [Validators.required, Validators.email], [this.customValidators.DuplicateEmailValidator],
+        {updateOn: 'blur'}], // rest api call will only once after blur
       mobile: [null, [Validators.required, Validators.pattern(/^[977]\d{9}$/)]],
       dateOfBirth: [null, [Validators.required, this.customValidators.minimumAgeValidator(19)]],
       password: [null, [Validators.required]],
@@ -53,9 +55,10 @@ export class SignupComponent implements OnInit {
         this.customValidators.compareValidator('confirmPassword', 'password')
       ]
     });
-    this.signUpForm.valueChanges.subscribe((value => {
-       console.log(value.dateOfBirth);
-    }));
+    this.signUpForm.valueChanges.subscribe((value) => {
+      this.canLeave = false;
+       // console.log(value.dateOfBirth);
+    });
   }
   onSubmitAccount(): any{
     // console.log(this.signUpForm.value);
@@ -82,6 +85,7 @@ export class SignupComponent implements OnInit {
     //       email: 'nirajan@gmail.com',
     //       mobile: '9843002u4'
     // });
+    this.canLeave = true;
   }
   onAddSkills(): any{
     const formGroup = new FormGroup({

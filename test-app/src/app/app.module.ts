@@ -5,8 +5,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AdminModule} from './admin/admin.module';
 import {AppRoutingModule} from './app-routing.module';
-import {CustomValidatorsService} from './custom-validators.service';
-
 @NgModule({
   declarations: [
     AppComponent
